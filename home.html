@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>LLG - Loot Level Gaming</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="dark-theme">
+  <header class="top-header">
+    <h2>LLG - Loot Level Gaming</h2>
+
+    <div class="header-buttons">
+      <!-- Home button -->
+      <a href="home.html" class="btn home-icon">
+        <img src="home-icon.png" alt="Home" class="home-img" />
+        <div>Home</div>
+      </a>
+
+      <!-- 3-dot menu -->
+      <div class="menu">
+        <button class="menu-btn" onclick="toggleMenu()">⋮</button>
+        <div class="menu-dropdown" id="menuDropdown">
+          <button onclick="toggleTheme()">Toggle Theme</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h1>Welcome to LLG!</h1>
+
+    <!-- Search Section -->
+    <div class="search-container">
+      <input type="text" id="searchBox" class="search-bar" placeholder="Search games..." />
+      <button class="btn search-btn" onclick="runSearch()">Search</button>
+    </div>
+
+    <p>Select your game to download:</p>
+
+    <!-- Game Cards -->
+    <div class="game-grid fade-in" id="gameGrid">
+      <!-- Minecraft -->
+      <div class="game-card" data-title="Minecraft PE v1.21.81">
+        <img src="minecraft-thumb.png" alt="Minecraft PE" class="game-img" />
+        <h2>Minecraft PE v1.21.81</h2>
+        <a href="minecraft.html" class="btn download-btn" target="_blank">Download</a>
+      </div>
+
+      <!-- Rally Furry -->
+      <div class="game-card" data-title="Rally Furry">
+        <img src="rally-furry-thumb.png" alt="Rally Furry" class="game-img" />
+        <h2>Rally Furry</h2>
+        <a href="rally-furry.html" class="btn download-btn" target="_blank">Download</a>
+      </div>
+
+      <!-- Rally Furry HappyMod -->
+      <div class="game-card" data-title="Rally Furry HappyMod">
+        <img src="rally-furry-happymod-thumb.png" alt="Rally Furry HappyMod" class="game-img" />
+        <h2>Rally Furry HappyMod</h2>
+        <a href="rally-furry-happymod.html" class="btn download-btn" target="_blank">Download</a>
+      </div>
+    </div>
+
+    <!-- Advertisement (clickable) -->
+    <div class="ad-banner fade-in">
+      <a href="https://www.youtube.com/@LOOTLEVELGAMING" target="_blank">
+        <img src="ad-banner.png" alt="Advertisement - Click to visit our YouTube channel" />
+      </a>
+    </div>
+  </main>
+
+  <!-- Profile Section -->
+  <div class="profile-box" onclick="openProfilePopup()">
+    <img src="profile.png" alt="Profile" class="profile-img" />
+    <span id="profile-name" class="profile-name">Guest</span>
+  </div>
+
+  <!-- Profile Popup -->
+  <div class="profile-popup" id="profilePopup">
+    <label for="username">Enter your name:</label>
+    <input type="text" id="username" placeholder="Your name" />
+    <label for="profileImage">Upload profile picture (optional):</label>
+    <input type="file" id="profileImage" accept="image/*" />
+    <button class="btn" onclick="saveProfile()">Save</button>
+    <button class="btn" onclick="closeProfilePopup()">Cancel</button>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 LLG - Loot Level Gaming</p>
+    <a href="https://wa.me/yourchannel" class="whatsapp-link" target="_blank">Join our WhatsApp Channel</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
